@@ -1,0 +1,68 @@
+<section class="login py-5 bg-light">
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-lg-5">
+        <img src="../../assets/pic-login.png" class="img-fluid" />
+      </div>
+      <div class="col-lg-7 text-center py-5">
+        <h1>X New</h1>
+        <form>
+          <div ng-form="formDangNhap">
+            <!-- Tên Tài Khảon -->
+            <div class="form-row py-3 pt-5">
+              <div class="offset-1 col-lg-10">
+                <input
+                  name="taiKhoan"
+                  type="text"
+                  class="inp px-3"
+                  ng-model="tenDangNhap"
+                  placeholder="Tên tài khoản"
+                  required="true"
+                />
+              </div>
+            </div>
+            <!-- Mật KhẩU -->
+            <div class="form-row">
+              <div class="offset-1 col-lg-10">
+                <input
+                  name="matKhau"
+                  type="password"
+                  class="inp px-3"
+                  placeholder="Mật khẩu"
+                  ng-model="matKhau"
+                  required="true"
+                />
+              </div>
+            </div>
+            <!-- QUÊN MẬT KHẨU         -->
+            <label for="" class="mt-2"
+              ><a href="#change-password" style="text-decoration: none"
+                >Quên mật khẩu?</a
+              ></label
+            >
+            <label for="" class="mt-2"
+              ><a href="#register-account" style="text-decoration: none"
+                >Đăng kí tài khoản?</a
+              ></label
+            >
+            <!-- Đăng Nhập-->
+            <div class="form-row py-3">
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button
+                  ng-disabled="formDangNhap.$invalid"
+                  href="#"
+                  class="btn btn-primary"
+                  type="button"
+                  style="border-radius: 60px"
+                  ng-click="dangNhapTaiKhoan()"
+                >
+                  Đăng Nhập
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

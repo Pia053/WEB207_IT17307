@@ -1,0 +1,288 @@
+{
+  "giaySneaker": [
+    {
+      "id": "2",
+      "ten": "Giày Nike Air Jordan 1 mid tuxedo Trắng Đen Rep 1:1",
+      "gia": 8500000,
+      "soLuong": 33,
+      "size": 37,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "jodan 1",
+      "anh": "JD1-Den-Cao-Co-0.jpg"
+    },
+    {
+      "id": "3",
+      "ten": "Giày Nike Air Jordan 1 Low SE ‘Washed Denim’ – JD LOANG BÒ",
+      "gia": 820000,
+      "soLuong": 45,
+      "size": 37,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "jodan 1",
+      "anh": "JD1-Loang-Bo-0.jpg",
+      "tenDangNhap": ""
+    },
+    {
+      "ten": "Giày Jd1 Xám trắng Like Auth",
+      "gia": 1000000,
+      "soLuong": 26,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "jodan 1",
+      "anh": "JD-Xám-trắng-Like-Auth-0.jpeg",
+      "size": 37,
+      "id": "5"
+    },
+    {
+      "ten": "AF1 Low White Brown Móc Nâu Siêu Cấp",
+      "gia": 555000,
+      "soLuong": 54,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "Nike",
+      "anh": "nike-moc-nau-0.jpeg",
+      "size": 37,
+      "id": "6"
+    },
+    {
+      "ten": "Giày Nike Air Force 1 – AF1 All White Like Auth",
+      "gia": 700000,
+      "soLuong": 74,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "Nike",
+      "anh": "nike-trang-0.jpeg",
+      "size": 37,
+      "id": "7"
+    },
+    {
+      "ten": "Giày Nike AF1 vệt đen siêu cấp",
+      "gia": 750000,
+      "soLuong": 77,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "Nike",
+      "anh": "Nike-Vet-Den-0.jpg",
+      "size": 37,
+      "id": "8"
+    },
+    {
+      "ten": "Giày Nike Air Force 1 Low Brooklyn Cream – Giày Nike âm Dương",
+      "gia": 920000,
+      "soLuong": 100,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "Nike",
+      "anh": "af1-am-duong-new-1.jpg",
+      "size": 37,
+      "id": "9"
+    },
+    {
+      "ten": "Giày Af1 Gucci",
+      "gia": 830000,
+      "soLuong": 33,
+      "thuocTinh": "Bền Bỉ",
+      "thuongHieu": "Nike",
+      "anh": "gucci-af1-new-1.jpg",
+      "size": 37,
+      "id": "10"
+    },
+    {
+      "ten": "Giày Jd1 Red Gymer Thấp Siêu Cấp Trung",
+      "gia": 820000,
+      "soLuong": 45,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "jodan 1",
+      "anh": "jd1-sieu-cap-new.jpeg",
+      "size": 37,
+      "id": "11"
+    },
+    {
+      "id": 74,
+      "ten": "Giày Jd1 Travit xanh hàng like auth",
+      "gia": 500000,
+      "soLuong": 2,
+      "size": 37,
+      "thuocTinh": "\n            Êm Chân\n          ",
+      "thuongHieu": "jodan 1",
+      "anh": "Giày-Jd1-Travit-xanh-hàng-like-auth-0.jpeg"
+    },
+    {
+      "id": 32,
+      "ten": "Giày Nike Air Jordan 1 Low ‘Black Toe’ Like Auth",
+      "gia": 950000,
+      "soLuong": 2,
+      "size": 37,
+      "thuocTinh": "\n            Bền Bỉ\n          ",
+      "thuongHieu": "jodan 1",
+      "anh": "jordan-1-low-black-toe-like-auth.jpeg"
+    },
+    {
+      "id": 76,
+      "ten": "Giày Jd1 Xám trắng Like Auth",
+      "gia": 100000,
+      "soLuong": 1,
+      "size": 37,
+      "thuocTinh": "\n            Tăng Chiều Cao\n          ",
+      "thuongHieu": "Nike",
+      "anh": "JD-Xám-trắng-Like-Auth-0.jpeg",
+      "tenDangNhap": ""
+    }
+  ],
+  "taiKhoan": [
+    {
+      "id": "1",
+      "hoTen": "Nguyễn Phúc Lâm",
+      "tenDangNhap": "nlamnp",
+      "matKhau": "123456",
+      "email": "lamnpph19850@gmail.com",
+      "gioiTinh": true,
+      "diaChi": "Vĩnh Phúc",
+      "role": "1"
+    },
+    {
+      "id": "0",
+      "hoTen": "hihihihccc",
+      "tenDangNhap": "phuclam",
+      "matKhau": "123456",
+      "email": "lam@gmail.com",
+      "gioiTinh": false,
+      "diaChi": "asdfgf",
+      "role": "2"
+    },
+    {
+      "id": 88,
+      "hoTen": "Nguyễn Phúc Lâm",
+      "tenDangNhap": "lamnguyen",
+      "matKhau": "123456",
+      "email": "lamnpph19850@gmail.com",
+      "gioiTinh": false,
+      "diaChi": "nguyễn phúc",
+      "role": 2
+    },
+    {
+      "id": 17,
+      "hoTen": "Nguyễn Phúc Lâm",
+      "tenDangNhap": "vp12356",
+      "matKhau": "123456",
+      "email": "phuclam05122003@gmail.com",
+      "gioiTinh": false,
+      "diaChi": "asdfgf",
+      "role": 2
+    }
+  ],
+  "cart": [
+    {
+      "ten": "Giày Nike Air Jordan 1 Low SE ‘Washed Denim’ – JD LOANG BÒ",
+      "gia": 820000,
+      "soLuong": 1,
+      "thuocTinh": "Êm Chân",
+      "thuongHieu": "jodan 1",
+      "anh": "JD1-Loang-Bo-0.jpg",
+      "id": "3"
+    }
+  ],
+  "thuocTinh": [
+    {
+      "$error": {},
+      "$name": "formThuocTinh",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "tenSanPham": {
+        "$viewValue": "Bền Bỉ",
+        "$modelValue": "Bền Bỉ",
+        "$validators": {},
+        "$asyncValidators": {},
+        "$parsers": [],
+        "$formatters": [
+          null
+        ],
+        "$viewChangeListeners": [],
+        "$untouched": false,
+        "$touched": true,
+        "$pristine": false,
+        "$dirty": true,
+        "$valid": true,
+        "$invalid": false,
+        "$error": {},
+        "$name": "tenSanPham",
+        "$options": {}
+      },
+      "tenThuocTinh": "Bền Bỉ",
+      "id": "1"
+    },
+    {
+      "$error": {},
+      "$name": "formThuocTinh",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "tenSanPham": {
+        "$viewValue": "Êm Chân",
+        "$modelValue": "Êm Chân",
+        "$validators": {},
+        "$asyncValidators": {},
+        "$parsers": [],
+        "$formatters": [
+          null
+        ],
+        "$viewChangeListeners": [],
+        "$untouched": false,
+        "$touched": true,
+        "$pristine": false,
+        "$dirty": true,
+        "$valid": true,
+        "$invalid": false,
+        "$error": {},
+        "$name": "tenSanPham",
+        "$options": {}
+      },
+      "tenThuocTinh": "Êm Chân",
+      "id": 66
+    },
+    {
+      "$error": {},
+      "$name": "formThuocTinh",
+      "$dirty": true,
+      "$pristine": false,
+      "$valid": true,
+      "$invalid": false,
+      "$submitted": false,
+      "tenSanPham": {
+        "$viewValue": "Tăng Chiều Cao",
+        "$modelValue": "Tăng Chiều Cao",
+        "$validators": {},
+        "$asyncValidators": {},
+        "$parsers": [],
+        "$formatters": [
+          null
+        ],
+        "$viewChangeListeners": [],
+        "$untouched": false,
+        "$touched": true,
+        "$pristine": false,
+        "$dirty": true,
+        "$valid": true,
+        "$invalid": false,
+        "$error": {},
+        "$name": "tenSanPham",
+        "$options": {}
+      },
+      "tenThuocTinh": "Tăng Chiều Cao",
+      "id": 70
+    }
+  ],
+  "lichSuMuaHang": [
+    {
+      "id": 58,
+      "tenSanPham": "Giày Jd1 Xám trắng Like Auth",
+      "anh": "JD-Xám-trắng-Like-Auth-0.jpeg",
+      "soLuongThuc": 1,
+      "thuongHieu": "jodan 1",
+      "gia": 1000000,
+      "taiKhoanMuaHang": "phuclam",
+      "tenNguoiNhan": "Nguyễn Phúc Lâm",
+      "diaChi": "vuinhx yên",
+      "soDienThoai": "0915288985"
+    }
+  ]
+}

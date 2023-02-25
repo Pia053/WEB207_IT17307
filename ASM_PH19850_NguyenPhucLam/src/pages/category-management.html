@@ -1,0 +1,102 @@
+<section>
+  <div class="container">
+    <h3
+      class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold text-center"
+    >
+      Quản Lý Sản Phẩm & Quản Lý Thuộc Tính
+    </h3>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="#product-management"
+          >Quản Lý Sản Phẩm</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#category-management">Quản Lý Thuộc Tính</a>
+      </li>
+    </ul>
+    <div ng-form="formThuocTinh">
+      <!-- <div class="mb-3">
+          <label class="form-label">Id</label>
+          <input
+            type="text"
+            class="form-control"
+            name="id"
+            ng-model="quanLyGiay.id"
+          />
+        </div> -->
+      <div class="mb-3">
+        <label class="form-label">Tên Thuộc Tính</label>
+        <input
+          type="text"
+          class="form-control"
+          name="tenSanPham"
+          ng-model="formThuocTinh.tenThuocTinh"
+          ng-required="true"
+        />
+      </div>
+      <span
+        style="color: red"
+        ng-show="formThuocTinh.tenSanPham.$error.required"
+      >
+        * Không được để trống tên thuộc tính</span
+      >
+      <div class="mb-3">
+        <button
+          ng-disabled="formThuocTinh.$invalid"
+          type="submit"
+          class="btn btn-primary"
+          ng-click="saveThuocTinh($event)"
+        >
+          Save
+        </button>
+        <button
+          ng-disabled="formThuocTinh.$invalid"
+          type="submit"
+          class="btn btn-primary"
+          ng-click="updateThuocTinh($event)"
+        >
+          Update
+        </button>
+      </div>
+
+      <h3 class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold">
+        Danh Sách Thuộc Tính
+      </h3>
+      <table class="table">
+        <thead class="table-dark text-center">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Tên Thuộc Tính</th>
+            <th scope="col">Thao Tác</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr ng-repeat="x in listsThuocTinh">
+            <td>{{x.id}}</td>
+            <td>{{x.tenThuocTinh}}</td>
+            <td>
+              <button
+                class="btn btn-warning"
+                role="button"
+                ng-click="detailThuocTinh($event,$index)"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+              <button
+                class="btn btn-danger"
+                role="button"
+                ng-click="deleteThuocTinh($event,$index)"
+              >
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

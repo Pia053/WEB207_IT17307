@@ -1,0 +1,193 @@
+<section class="register">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-md-6 bg-light p-3 my-3 shadow">
+        <img
+          src="../../assets/logo-chu-X-x_logo_2x-2-removebg.png"
+          alt=""
+          srcset=""
+          width="200"
+          height="100"
+          class="rounded mx-auto d-block"
+        />
+        <h1 class="text-center text-uppercase py-3">Đăng Kí Tài Khoản</h1>
+
+        <!-- <form class="form-group" name="rigister"> -->
+        <div ng-form="formDangKi">
+          <!-- Họ Và Tên -->
+          <div class="form-group">
+            <label for="fullname">Họ Và Tên</label>
+            <input
+              type="text"
+              class="form-control mt-2 mb-3"
+              id="fullname"
+              name="fullname"
+              ng-model="taiKhoan.hoTen"
+              ng-minlength="6"
+              ng-maxlength="30"
+              required="true"
+            />
+          </div>
+          <span class="error" ng-show="formDangKi.fullname.$error.required"
+            >* Yêu cầu nhập Họ Và Tên</span
+          >
+          <span class="error" ng-show="formDangKi.fullname.$error.minlength"
+            >* Họ Và Tên ít nhất 6 ký tự</span
+          >
+          <span class="error" ng-show="formDangKi.fullname.$error.maxlength"
+            >* Họ Và Tên nhiều nhất 30 ký tự</span
+          >
+          <!--Tên đăng Nhập -->
+          <div class="form-group">
+            <label for="username">Tên Đăng Nhập</label>
+            <input
+              type="text"
+              class="form-control mt-2 mb-3"
+              id="username"
+              name="username"
+              ng-model="taiKhoan.tenDangNhap"
+              required="true"
+              ng-minlength="6"
+              ng-maxlength="12"
+            />
+          </div>
+          <span class="error mb-2" ng-show="formDangKi.username.$error.required"
+            >* Yêu cầu nhập Tên đăng nhập</span
+          >
+          <span
+            class="error mb-2"
+            ng-show="formDangKi.username.$error.minlength"
+            >* Tên Đăng Nhập ít nhất 6 ký tự</span
+          >
+          <span
+            class="error mb-2"
+            ng-show="formDangKi.username.$error.maxlength"
+            >* Tên Đăng Nhập nhiều nhất 12 ký tự</span
+          >
+          <!--Mật Khẩu -->
+          <div class="form-group">
+            <label for="password">Mật Khẩu</label>
+            <input
+              type="password"
+              class="form-control mt-2 mb-3"
+              id="password"
+              name="password"
+              ng-model="taiKhoan.matKhau"
+              ng-minlength="6"
+              ng-maxlength="12"
+              required="true"
+            />
+          </div>
+          <span class="error mb-2" ng-show="formDangKi.password.$error.required"
+            >* Yêu cầu nhập Mật Khẩu</span
+          >
+          <span
+            class="error mb-2"
+            ng-show="formDangKi.password.$error.minlength"
+            >* Mật khẩu ít nhất 6 ký tự</span
+          >
+          <span
+            class="error mb-2"
+            ng-show="formDangKi.password.$error.maxlength"
+            >* Mật khẩu nhiều nhất 12 ký tự</span
+          >
+
+          <!--Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control mt-2 mb-3"
+              id="email"
+              name="email"
+              ng-pattern="/^.+@gmail\.com$/"
+              ng-model="taiKhoan.email"
+              required="true"
+            />
+          </div>
+          <span class="error mb-2" ng-show="formDangKi.email.$error.required"
+            >* Yêu cầu nhập Email</span
+          >
+          <span
+            class="error mb-2"
+            ng-show="!formDangKi.email.$error.require&&formDangKi.email.$error.pattern"
+            >* Yêu cầu Email nhập đúng đúng định dạnh @gmail.com</span
+          >
+
+          <!-- Giới Tính -->
+          <div class="form-group">
+            <label for="gender">Giới Tính</label>
+            <div>
+              <div class="form-check form-check-inline mb-3 mt-2">
+                <input
+                  type="radio"
+                  name="gender"
+                  ng-checked="taiKhoan.gioiTinh == true"
+                  id="male"
+                  value="true"
+                  class="form-check-input"
+                  checked
+                  ng-required="true"
+                />
+                <label for="male" class="form-check-label">Nam</label>
+              </div>
+              <div class="form-check form-check-inline mb-3 mt-2">
+                <input
+                  type="radio"
+                  name="gender"
+                  ng-checked="taiKhoan.gioiTinh == false"
+                  id="female"
+                  value="false"
+                  class="form-check-input"
+                  ng-required="true"
+                />
+                <label for="female" class="form-check-label">Nữ</label>
+              </div>
+            </div>
+          </div>
+          <span class="error" ng-show="formDangKi.gender.$error.required"
+            >* Yêu cầu chọn Giới Tính</span
+          >
+          <!--Địa Chỉ -->
+          <div class="form-group">
+            <label for="address">Địa Chỉ</label>
+            <input
+              type="text"
+              class="form-control mt-2 mb-3"
+              id="address"
+              name="address"
+              ng-model="taiKhoan.diaChi"
+              ng-minlength="6"
+              ng-maxlength="20"
+              required="true"
+            />
+          </div>
+          <!-- <span ng-hide="formDangKi.address.$valid"
+              >Không được để trống địa chỉ</span
+            > -->
+          <span class="error" ng-show="formDangKi.address.$error.required"
+            >* Yêu cầu nhập Địa Chỉ</span
+          >
+          <span class="error" ng-show="formDangKi.address.$error.minlength"
+            >* Ít nhất 6 ký tự</span
+          >
+          <span class="error mb-2" ng-show="formDangKi.address.$error.maxlength"
+            >* Nhiều nhất 20 ký tự</span
+          >
+          <!--  -->
+
+          <div class="d-grid gap-2">
+            <input
+              ng-disabled="!formDangKi.$valid"
+              type="submit"
+              value="Đăng Ký"
+              class="btn-primary btn btn-block"
+              ng-click="dangKi($event)"
+            />
+          </div>
+        </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
+</section>

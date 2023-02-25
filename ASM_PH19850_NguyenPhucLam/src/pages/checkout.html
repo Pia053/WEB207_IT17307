@@ -1,0 +1,116 @@
+<section>
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold">
+        Mua Hàng
+      </h3>
+      <p class="text-sub size-14">Hình thức thanh toán</p>
+    </div>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Ảnh</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Số Lượng</th>
+            <th scope="col">Thương Hiệu</th>
+            <th scope="col">giá</th>
+            <th scope="col">Thành Tiền</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="sanPhamCheckout in listsSanPhamCheckout">
+            <th scope="row">{{$index +1}}</th>
+            <td>
+              <img
+                src="../../assets/{{sanPhamCheckout.anh}}"
+                class="img-fluid"
+                style="width: 200px"
+              />
+            </td>
+            <td>{{sanPhamCheckout.ten}}</td>
+            <td>
+              <input
+                type="number"
+                min="1"
+                ng-model="soLuongThuc"
+                name="quantity"
+                value="1"
+              />
+            </td>
+            <td>{{sanPhamCheckout.thuongHieu}}</td>
+            <td>{{sanPhamCheckout.gia | currency:"":0}} VND</td>
+            <td>{{sanPhamCheckout.gia * soLuongThuc| currency:"":0}} VND</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <div class="text-center mb-5">
+          <h3
+            class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold"
+          >
+            Thông Tin Nhận Hàng
+          </h3>
+        </div>
+      </div>
+      <div ng-form="formCheckout">
+        <div class="mb-3">
+          <label class="form-label">Tên Người Nhận</label>
+          <input
+            type="text"
+            class="form-control"
+            name="tenNguoiNhan"
+            ng-model="sanPhamCheckout.tenNguoiNhan"
+            required="true"
+          />
+        </div>
+        <span
+          style="color: red"
+          ng-show="formCheckout.tenNguoiNhan.$error.required"
+          >* không được để trống tên người nhận</span
+        >
+        <!--  -->
+        <div class="mb-3">
+          <label class="form-label">Địa chỉ</label>
+          <input
+            type="text"
+            class="form-control"
+            name="diaChi"
+            ng-model="sanPhamCheckout.diaChi"
+            required="true"
+          />
+        </div>
+        <span style="color: red" ng-show="formCheckout.diaChi.$error.required"
+          >* không được để trống địa chỉ</span
+        >
+        <!--  -->
+        <div class="mb-3">
+          <label class="form-label">Số điện thoại</label>
+          <input
+            type="text"
+            class="form-control"
+            name="soDienThoai"
+            ng-model="sanPhamCheckout.soDienThoai"
+            required="true"
+          />
+          <span
+            style="color: red"
+            ng-show="formCheckout.soDienThoai.$error.required"
+            >* không được để trống số điện thoại</span
+          >
+          <div>
+            <button
+              ng-disabled="formCheckout.$invalid"
+              type="submit"
+              class="btn btn-primary mt-3"
+              ng-click="thanhToan($event)"
+            >
+              Thanh Toán
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

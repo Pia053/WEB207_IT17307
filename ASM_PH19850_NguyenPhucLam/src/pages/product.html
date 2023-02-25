@@ -1,0 +1,63 @@
+<section>
+  <div class="container">
+    <hr />
+    <h3
+      class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold text-center"
+    >
+      Sản Phẩm
+    </h3>
+    <!-- Test -->
+    <!-- Test END -->
+    <ul class="nav justify-content-center mb-5">
+      <li class="nav-item">
+        <a class="dropdown-item" ng-click="filterByCategory($event);"> ALL </a>
+      </li>
+      <li class="nav-item" ng-repeat="c in listsThuocTinh">
+        <a
+          href="javascript: void(0);"
+          class="dropdown-item"
+          ng-click="filterByCategory(c);"
+        >
+          {{c.tenThuocTinh}}
+        </a>
+      </li>
+    </ul>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" ng-repeat="x in listsGiaySneaker | filter: c_filter">
+        <!-- card -->
+        <div class="card h-100 shadow custom-card">
+          <!-- ảnh -->
+          <img
+            src="../../assets/{{x.anh}}"
+            alt=""
+            class="card-ing-top w-100 custom-bg"
+          />
+          <!--  -->
+          <div class="card-body">
+            <h4 class="card-title">{{x.ten}}</h4>
+          </div>
+          <div class="card-footer custom-footer">
+            <div class="float-start">
+              <h4 class="custom-highlight">{{x.gia | currency:"":0}} VND</h4>
+            </div>
+            <div class="float-end">
+              <!-- Mua Ngay -->
+              <a
+                href="#cart/{{x.id}}"
+                class="btn btn-primary rounded-3 custom-btn"
+              >
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+              <a
+                href="#detail-product/{{x.id}}"
+                class="btn btn-primary rounded-3 custom-btn"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

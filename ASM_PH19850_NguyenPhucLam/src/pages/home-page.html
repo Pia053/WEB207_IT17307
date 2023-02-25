@@ -1,0 +1,217 @@
+<section id="cover">
+  <div class="container mt-2">
+    <div class="row g-2 justify-content-around">
+      <div
+        class="col-md-6 d-flex justify-content align-items-center order-lg-2"
+      >
+        <div class="p-3">
+          <img
+            src="../../assets/hero.png"
+            alt=""
+            class="mx-auto d-block w-100 img-fluid"
+          />
+        </div>
+      </div>
+
+      <div
+        class="col-md-6 d-flex justify-content align-items-center order-lg-2"
+      >
+        <div class="p-3">
+          <h1 class="custom-highlight" style="font-weight: bold">X News</h1>
+          <h1 class="text">Không Ngừng Vươn Xa...</h1>
+          <p>
+            Qua hơn 39 năm hoạt động sản xuất kinh doanh với bao thăng trầm và
+            thách thức, giờ đây, X News đã lớn mạnh và phát triển đi lên cùng
+            đất nước, trở thành một thương hiệu uy tín, tin cậy và quen thuộc
+            với người tiêu dùng và là niềm tự hào của người Việt Nam về một
+            “Thương hiệu Quốc gia” trong lĩnh vực kinh doanh và phân phối Giày
+            sneaker uy tín và chất lượng.
+          </p>
+          <!-- <button class="btn btn-primary rounded-3 custom-btn" type="button">
+            <i class="fa fa-shopping-cart"></i>Mua Ngay
+          </button> -->
+        </div>
+      </div>
+    </div>
+    <!-- main -->
+    <div id="service" class="mt-5">
+      <div class="row g-2 justify-content-around">
+        <div class="col-md-6 d-flex justify-content align-items-center order-1">
+          <div class="col">
+            <div
+              class="card p-3 mb-3 custom-services-card"
+              style="max-width: 540px"
+            >
+              <div class="row g-0">
+                <div class="col-md-4 gy-3">
+                  <img
+                    src="../../assets/image 12.png"
+                    alt=""
+                    class="mx-auto d-block custom-img-width"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body custom-text">
+                    <h5 class="card-title">Cửa Hàng</h5>
+                    <div class="card-text">
+                      <ul>
+                        <li>Chi Nhánh 1:Ngô Quyền - Vĩnh Yên - Vĩnh Phúc</li>
+                        <li>Chi Nhánh 2: Quan Hoa - Cầu Giấy - Hà Nội</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card p-3 mb-3 custom-services-card"
+              style="max-width: 540px"
+            >
+              <div class="row g-0">
+                <div class="col-md-4 gy-3">
+                  <img
+                    src="../../assets/image 13.png"
+                    alt=""
+                    class="mx-auto d-block custom-img-width"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body custom-text">
+                    <h5 class="card-title">Đơn Vị Vẩn Chuyển</h5>
+                    <div class="card-text">
+                      <ul>
+                        <li>Giao Hàng Tiết Kiệm</li>
+                        <li>GIao Hàng Nhanh</li>
+                        <li>Express</li>
+                        <li>Ninja Van</li>
+                        <li>VietNam Post</li>
+                        <li>GIao Hàng Nhanh</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card p-3 mb-3 custom-services-card"
+              style="max-width: 540px"
+            >
+              <div class="row g-0">
+                <div class="col-md-4 gy-3">
+                  <img
+                    src="../../assets/image 14.png"
+                    alt=""
+                    class="mx-auto d-block custom-img-width"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body custom-text">
+                    <h5 class="card-title">Tư Vấn Hỗ Trợ</h5>
+                    <div class="card-text">
+                      <ul>
+                        <li>Họ Tên: Nguyễn Văn Phú <br />- ĐT: 0982226477</li>
+                        <li>Họ Tên: Vũ Vân Anh <br />- ĐT: 09888</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col order-lg-2">
+          <img
+            src="../../assets/section1.png"
+            alt=""
+            class="mx-auto d-block w-100"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Product -->
+    <div id="products" class="mt-5">
+      <h4 class="card-title text-center">Sản Phẩm Mới</h4>
+      <!-- row -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" ng-repeat="x in listsTopGiayNew">
+          <!-- card -->
+          <div class="card h-100 shadow custom-card">
+            <!-- ảnh -->
+            <img
+              alt=""
+              src="../../assets/{{x.anh}}"
+              class="card-ing-top w-100 custom-bg"
+            />
+            <!--  -->
+            <div class="card-body">
+              <h4 class="card-title">{{x.ten}}</h4>
+            </div>
+            <div class="card-footer custom-footer">
+              <div class="float-start">
+                <h4 class="custom-highlight">{{x.gia | currency:"":0}} VND</h4>
+              </div>
+              <div class="float-end">
+                <!-- Mua Ngay -->
+                <a
+                  href="#cart/{{x.id}}"
+                  class="btn btn-primary rounded-3 custom-btn"
+                >
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+                <a
+                  href="#detail-product/{{x.id}}"
+                  class="btn btn-primary rounded-3 custom-btn"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product -->
+    <div id="products" class="mt-5">
+      <h4 class="card-title text-center">Sản Phẩm Bán Chạy</h4>
+      <!-- row -->
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" ng-repeat="x in listsTopGiayBanChay">
+          <!-- card -->
+          <div class="card h-100 shadow custom-card">
+            <!-- ảnh -->
+            <img
+              alt=""
+              src="../../assets/{{x.anh}}"
+              class="card-ing-top w-100 custom-bg"
+            />
+            <!--  -->
+            <div class="card-body">
+              <h4 class="card-title">{{x.ten}}</h4>
+            </div>
+            <div class="card-footer custom-footer">
+              <div class="float-start">
+                <h4 class="custom-highlight">{{x.gia | currency:"":0}} VND</h4>
+              </div>
+              <div class="float-end">
+                <!-- Mua Ngay -->
+                <a
+                  href="#cart/{{x.id}}"
+                  class="btn btn-primary rounded-3 custom-btn"
+                >
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+                <a
+                  href="#detail-product/{{x.id}}"
+                  class="btn btn-primary rounded-3 custom-btn"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

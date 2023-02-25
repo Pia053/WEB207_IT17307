@@ -1,0 +1,36 @@
+<section>
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold">
+        Lịch Sử Mua Hàng
+      </h3>
+      <p class="text-sub size-14">
+        Chặng đường thành lập và hướng đi của X News
+      </p>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Ảnh</th>
+              <th scope="col">Tên</th>
+              <th scope="col">Số Lượng</th>
+              <th scope="col">Thương Hiệu</th>
+              <th scope="col">giá</th>
+              <th scope="col">Thành Tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in listsLichSuMuaHangTaiKhoan">
+              <td></td>
+              <td>{{x.tenSanPham}}</td>
+              <td>{{x.gia}}</td>
+              <td>{{x.soLuongThuc}}</td>
+              <!-- <td>{{x.gia| currency:"":0}} VND</td>
+              <td>{{x.gia * x.soLuongThuc |currency:"":0}} VND</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

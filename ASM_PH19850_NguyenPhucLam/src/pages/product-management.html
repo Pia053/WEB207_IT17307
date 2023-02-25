@@ -1,0 +1,192 @@
+<section>
+  <div class="container">
+    <h3
+      class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold text-center"
+    >
+      Quản Lý Sản Phẩm & Quản Lý Thuộc Tính
+    </h3>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="#product-management"
+          >Quản Lý Sản Phẩm</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#category-management">Quản Lý Thuộc Tính</a>
+      </li>
+    </ul>
+    <div ng-form="formQuanLy">
+      <div class="mb-3">
+        <label class="form-label">Tên Sản Phẩm</label>
+        <input
+          type="text"
+          class="form-control"
+          name="tenSanPham"
+          ng-model="quanLyGiay.ten"
+          required="true"
+        />
+      </div>
+      <span style="color: red" ng-show="formQuanLy.tenSanPham.$error.required"
+        >* không được để trống tên sản phẩm</span
+      >
+      <!--  -->
+      <div class="mb-3">
+        <label class="form-label">Giá Sản Phẩm</label>
+        <input
+          type="number"
+          class="form-control"
+          min="100000"
+          name="giaSanPham"
+          ng-model="quanLyGiay.gia"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Số Lượng</label>
+        <input
+          type="number"
+          class="form-control"
+          min="0"
+          name="soLuong"
+          ng-model="quanLyGiay.soLuong"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">size</label>
+        <input
+          type="number"
+          class="form-control"
+          min="37"
+          max="40"
+          name="size"
+          ng-model="quanLyGiay.size"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Thuộc Tính</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          ng-model="quanLyGiay.thuocTinh"
+        >
+          <option
+            checked
+            ng-repeat="x in listsThuocTinh"
+            ng-checked="quanLyGiay.thuocTinh == x.tenThuocTinh"
+          >
+            {{x.tenThuocTinh}}
+          </option>
+          <!-- <option ng-checked="quanLyGiay.thuocTinh == 'Bền Bỉ'" value="Bền Bỉ">
+            Bền Bỉ
+          </option> -->
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Thương Hiệu</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          ng-model="quanLyGiay.thuongHieu"
+        >
+          >
+          <option
+            ng-checked="quanLyGiay.thuongHieu == 'Nike'"
+            value="Nike"
+            checked
+          >
+            Nike
+          </option>
+          <option
+            ng-checked="quanLyGiay.thuongHieu == 'jodan 1'"
+            value="jodan 1"
+          >
+            jodan 1
+          </option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Ảnh</label>
+        <input
+          type="text"
+          class="form-control"
+          min="100000"
+          name="anh"
+          ng-model="quanLyGiay.anh"
+          required="true"
+        />
+      </div>
+      <span style="color: red" ng-show="formQuanLy.anh.$error.required"
+        >* không được để trống tên sản phẩm</span
+      >
+      <!--  -->
+      <div>
+        <button
+          ng-disabled="formQuanLy.$invalid"
+          type="submit"
+          class="btn btn-primary"
+          ng-click="saveGiay($event)"
+        >
+          Save
+        </button>
+        <button
+          ng-disabled="formQuanLy.$invalid"
+          type="submit"
+          class="btn btn-primary"
+          ng-click="updateGiay($event)"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+    <!--  -->
+    <h3 class="highlight header-colorize text-uppercase mb-3 mt-2 fw-bold">
+      Danh Sách Sản Phẩm
+    </h3>
+    <table class="table">
+      <thead class="table-dark text-center">
+        <tr>
+          <th scope="col">STT</th>
+          <th scope="col">Ảnh</th>
+          <th scope="col">Tên Sản Phẩm</th>
+          <th scope="col">Giá Sản Phẩm</th>
+          <th scope="col">Thuộc Tính</th>
+          <th scope="col">Thao Tác</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr ng-repeat="x in listsGiaySneaker">
+          <td>{{$index+1}}</td>
+          <th scope="row">
+            <img
+              src="../../assets/{{x.anh}}"
+              class="card-ing-top w-100 custom-bg"
+            />
+          </th>
+          <td>{{x.ten}}</td>
+          <td>{{x.gia | currency:"":0}} VND</td>
+          <td>{{x.thuocTinh}}</td>
+          <td>
+            <a
+              href="#detail-sneaker/{{x.id}}"
+              class="btn btn-warning"
+              type="submit"
+              ng-click="detailGiaySneaker($event,$index)"
+            >
+              <i class="fa-solid fa-eye"></i>
+            </a>
+            <a
+              href="#delete-sneaker/{{x.id}}"
+              class="btn btn-danger"
+              type="submit"
+              ng-click="deleteGiaySneaker($event,$index)"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
